@@ -1,0 +1,47 @@
+# Directory where your files will be synced to
+syncDirectory = "~/.dotfiles"
+# If true, include all subfolders of directories included
+includeSubfolders = true
+# If true, files or directories mentioned in [exclude] will always be
+# excluded, even if explicitely or implicitely included via [include]
+excludeHasPriority = true
+# Name of the mapping file created in your repo
+# This file must always be a toml file (like this config), and holds
+# information on wher each file / directory will be copied 'back to'
+mappingFile = "sync.toml"
+# If the destination directory does not exist, should it be created
+# before copying a file to it? If not, sync will do what's specified
+# in 'skipOnError'
+createDirectories = true
+# If this is true, files / directories causing errors will be skipped.
+# If this is false, errors will cause the sync to abort
+skipOnError = true
+# If true, files that have been synced in the past but are not found in 
+# sync directories anymore will NOT be deleted in the sync directory
+neverDelete = true
+
+[include]
+# Single files to include in sync
+files = []
+# Directories to include 
+directories = []
+# Glob patterns that specify which files or directories to include
+patterns = []
+
+[exclude]
+# Single files to exlucde frome sync
+files = []
+# Directories to exlucde
+directories = []
+# Glob patterns that specify which files or directories to exclude
+patterns = []
+
+[git]
+# Repository that holds your config files
+# Used to download config files if requested
+repo = "github.com/brlywk/dotfiles"
+# Always push changes to git repo after a sync
+# Important: Git need to be properly set up for this to work!
+alwaysPushOnSync = true
+# Should a sync create a new branch in your git repo?
+createBranch = false
