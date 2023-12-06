@@ -22,7 +22,7 @@ neverDelete = true
 
 [include]
 # Single files to include in sync
-files = []
+files = ["File.1", "File.2"]
 # Directories to include 
 directories = []
 # Glob patterns that specify which files or directories to include
